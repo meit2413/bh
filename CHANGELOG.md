@@ -4,7 +4,7 @@
 
 1. **Complete UI/UX Overhaul**:
    - Replaced heavy Bootstrap 4, jQuery, Owl Carousel, and Magnific Popup legacy dependencies with a zero-dependency 2026 CSS/JS design system.
-   - Introduced dark/light mode toggle with preference persistence in `localStorage`.
+   - Enforced a pure, futuristic 2026 dark-theme design system with glassmorphism surfaces and glow accents.
    - Designed responsive Bento Grid layouts for services and features.
 
 2. **SEO Optimization**:

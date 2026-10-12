@@ -16,20 +16,20 @@
 <header class="site-header">
     <div class="container nav-container">
         <a href="index.php" class="site-logo" aria-label="Beezerhost Home">
-            <img src="/assets/images/logo.svg" alt="Beezerhost Cloud Infrastructure Logo" width="220" height="42">
+            <img src="/assets/images/logo.svg" alt="Beezerhost Cloud Infrastructure Logo" width="240" height="50">
         </a>
 
         <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
             <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
 
-        <nav id="nav-menu">
-            <ul class="nav-menu">
+        <nav id="nav-wrapper">
+            <ul class="nav-menu" id="nav-menu">
                 <li class="nav-item">
                     <a href="index.php" class="nav-link">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" aria-expanded="false">
                         Hosting
                         <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </a>
@@ -54,8 +54,8 @@
                         </a>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" aria-expanded="false">
                         VPS
                         <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </a>

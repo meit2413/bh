@@ -1,24 +1,60 @@
 /**
  * Beezerhost Modern UI JavaScript Controller
- * - Mobile menu toggle
+ * - Mobile menu toggle with full backdrop overlay & dropdown accordion support
  * - FAQ Accordion toggles
- * - Smooth scroll
+ * - Smooth anchor scroll
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Mobile Navigation Toggle
+  // 1. Mobile Navigation & Dropdown Accordion Controller
   const mobileToggle = document.getElementById('mobile-toggle');
   const navMenu = document.getElementById('nav-menu');
 
   if (mobileToggle && navMenu) {
-    mobileToggle.addEventListener('click', () => {
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
       mobileToggle.setAttribute('aria-expanded', !expanded);
       navMenu.classList.toggle('is-active');
     });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (window.innerWidth <= 992 && navMenu.classList.contains('is-active')) {
+        if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+          navMenu.classList.remove('is-active');
+          mobileToggle.setAttribute('aria-expanded', 'false');
+        }
+      }
+    });
   }
 
-  // 2. Accordion / FAQ Toggle
+  // 2. Mobile Dropdown Sub-menu Accordion Toggles
+  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+  dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      if (window.innerWidth <= 992) {
+        e.preventDefault();
+        const parentItem = toggle.closest('.has-dropdown');
+        if (parentItem) {
+          const isOpen = parentItem.classList.contains('dropdown-open');
+          // Close other open dropdowns in mobile
+          document.querySelectorAll('.has-dropdown').forEach(item => {
+            item.classList.remove('dropdown-open');
+            const link = item.querySelector('.dropdown-toggle');
+            if (link) link.setAttribute('aria-expanded', 'false');
+          });
+
+          if (!isOpen) {
+            parentItem.classList.add('dropdown-open');
+            toggle.setAttribute('aria-expanded', 'true');
+          }
+        }
+      }
+    });
+  });
+
+  // 3. Accordion / FAQ Toggle
   const faqQuestions = document.querySelectorAll('.faq-question');
   faqQuestions.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -38,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 3. Smooth Anchor Link Scrolling
+  // 4. Smooth Anchor Link Scrolling
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
@@ -47,6 +83,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (targetElement) {
           e.preventDefault();
           targetElement.scrollIntoView({ behavior: 'smooth' });
+          if (window.innerWidth <= 992 && navMenu) {
+            navMenu.classList.remove('is-active');
+            if (mobileToggle) mobileToggle.setAttribute('aria-expanded', 'false');
+          }
         }
       }
     });
