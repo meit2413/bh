@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="280" height="60" fill="none">
+  <!-- Futuristic Glowing Hexagon Cloud Logo Icon -->
+  <defs>
+    <linearGradient id="beezer-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FC5C5C" />
+      <stop offset="100%" stop-color="#FF8A00" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Hex Node / Server Cloud Polygon -->
+  <g filter="url(#glow)">
+    <polygon points="30,8 50,19 50,41 30,52 10,41 10,19" fill="url(#beezer-grad)" opacity="0.15" stroke="url(#beezer-grad)" stroke-width="2" />
+    <path d="M22,23 L38,23 L42,30 L38,37 L22,37 L18,30 Z" fill="none" stroke="url(#beezer-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="30" cy="30" r="3.5" fill="#FC5C5C" />
+    <line x1="30" y1="8" x2="30" y2="19" stroke="#FC5C5C" stroke-width="2" stroke-dasharray="2,2"/>
+    <line x1="30" y1="41" x2="30" y2="52" stroke="#FC5C5C" stroke-width="2" stroke-dasharray="2,2"/>
+  </g>
+
+  <!-- Brand Name Typography -->
+  <text x="64" y="38" font-family="'Inter', system-ui, sans-serif" font-weight="800" font-size="25" fill="#FFFFFF" letter-spacing="-0.5">Beezer<tspan fill="#FC5C5C">host</tspan></text>
+  <text x="65" y="49" font-family="'Inter', system-ui, sans-serif" font-weight="600" font-size="8.5" fill="#9CA3AF" letter-spacing="1.8">CLOUD INFRASTRUCTURE</text>
+</svg>

@@ -3,7 +3,7 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <a href="index.php">
-                    <img src="/assets/images/footer-logo.png" alt="Beezerhost Logo" width="180" height="40" loading="lazy">
+                    <img src="/assets/images/logo.svg" alt="Beezerhost Cloud Infrastructure Logo" width="200" height="40" loading="lazy">
                 </a>
                 <p>High-speed, reliable, and affordable web hosting & Managed VPS solutions tailored for personal sites, agencies, and enterprises.</p>
             </div>

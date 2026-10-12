@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BEEZERHOST 2026 MODERN FUTURISTIC DESIGN SYSTEM
+   BEEZERHOST 2026 MODERN FUTURISTIC DESIGN SYSTEM (DARK EDITION)
    ========================================================================== */
 
 :root {
@@ -10,7 +10,7 @@
   --color-brand-secondary: #00F2FE;
   --color-brand-accent: #4FACFE;
 
-  /* Theme: Dark (Default Base) */
+  /* Dark Theme Default */
   --bg-body: #090D16;
   --bg-surface: #111827;
   --bg-surface-glass: rgba(17, 24, 39, 0.75);
@@ -44,28 +44,6 @@
   --transition-bounce: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 
   --container-max: 1240px;
-}
-
-/* Light Theme Override */
-[data-theme="light"] {
-  --bg-body: #F8FAFC;
-  --bg-surface: #FFFFFF;
-  --bg-surface-glass: rgba(255, 255, 255, 0.85);
-  --bg-surface-elevated: #F1F5F9;
-  --bg-subtle: #EDF2F7;
-
-  --border-color: rgba(0, 0, 0, 0.08);
-  --border-color-glow: rgba(252, 92, 92, 0.5);
-
-  --text-main: #1E293B;
-  --text-muted: #64748B;
-  --text-subtle: #94A3B8;
-  --text-heading: #0F172A;
-
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.12);
-  --shadow-glow: 0 4px 20px rgba(252, 92, 92, 0.2);
 }
 
 /* Base Resets */
@@ -152,11 +130,6 @@ h5 { font-size: 1.1rem; }
 
 .text-gradient {
   background: linear-gradient(135deg, #FFF 30%, var(--color-brand-primary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-[data-theme="light"] .text-gradient {
-  background: linear-gradient(135deg, #0F172A 30%, var(--color-brand-primary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -309,8 +282,8 @@ h5 { font-size: 1.1rem; }
   letter-spacing: -0.03em;
 }
 
-.site-logo img {
-  height: 38px;
+.site-logo img, .site-logo svg {
+  height: 42px;
   width: auto;
 }
 
@@ -403,25 +376,6 @@ h5 { font-size: 1.1rem; }
   display: flex;
   align-items: center;
   gap: 1rem;
-}
-
-/* Theme Toggle Switch */
-.theme-toggle {
-  background: var(--bg-surface-elevated);
-  border: 1px solid var(--border-color);
-  color: var(--text-main);
-  width: 40px;
-  height: 40px;
-  border-radius: var(--radius-full);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all var(--transition-fast);
-}
-.theme-toggle:hover {
-  border-color: var(--color-brand-primary);
-  color: var(--color-brand-primary);
 }
 
 /* Mobile Nav Toggle */

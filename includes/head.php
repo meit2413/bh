@@ -16,7 +16,7 @@ function render_head($title, $description, $canonical_url = '', $page_type = 'we
     }
 ?>
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

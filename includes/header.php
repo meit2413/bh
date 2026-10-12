@@ -16,7 +16,7 @@
 <header class="site-header">
     <div class="container nav-container">
         <a href="index.php" class="site-logo" aria-label="Beezerhost Home">
-            <img src="/assets/images/logo.png" alt="Beezerhost Logo" width="180" height="38">
+            <img src="/assets/images/logo.svg" alt="Beezerhost Cloud Infrastructure Logo" width="220" height="42">
         </a>
 
         <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -96,9 +96,6 @@
         </nav>
 
         <div class="header-actions">
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
-                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-            </button>
             <a href="shared-hosting.php" class="btn btn-primary">Get Started</a>
         </div>
     </div>
