@@ -1,0 +1,15 @@
+{
+  "name": "Beezerhost Managed Web Hosting",
+  "short_name": "Beezerhost",
+  "start_url": "/index.php",
+  "display": "standalone",
+  "background_color": "#090D16",
+  "theme_color": "#FC5C5C",
+  "icons": [
+    {
+      "src": "/assets/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

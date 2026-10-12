@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /panel/
+Disallow: /includes/
+
+Sitemap: https://beezerhost.com/sitemap.xml
